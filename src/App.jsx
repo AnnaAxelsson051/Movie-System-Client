@@ -3,13 +3,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Hero from './Hero';
+import Card from './Card';
 
 const MainContainer = styled.main`
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 align-items: center;
-background: red;
+//background: red;
 min-height: 100vh;
 `;
 
@@ -28,6 +29,8 @@ function App() {
   error quibusdam mollitia adipisci aut optio esse cumque 
   odio!</StyledPara>
   <Hero/>
+  <Card/>
+  <Card/>
  </MainContainer>
   )
 }
