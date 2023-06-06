@@ -2,6 +2,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Hero from './Hero';
+
 const MainContainer = styled.main`
 display: flex;
 flex-direction: column;
@@ -25,6 +27,7 @@ function App() {
   numquam facere iste recusandae error doloremque? Earum 
   error quibusdam mollitia adipisci aut optio esse cumque 
   odio!</StyledPara>
+  <Hero/>
  </MainContainer>
   )
 }
