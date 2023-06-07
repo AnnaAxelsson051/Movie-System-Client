@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Hero from './Hero';
-import CardList from 'CardList';
+import CardList from './CardList';
 
 
 const MainContainer = styled.main`
@@ -32,6 +32,7 @@ function App() {
   error quibusdam mollitia adipisci aut optio esse cumque 
   odio!</StyledPara>
   <Hero/>
+  <CardList/>
 
   
   {/*<Card poster={godfather_3_pic} title="Godfather III" 
