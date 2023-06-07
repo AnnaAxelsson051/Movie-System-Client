@@ -30,14 +30,4 @@ function Card (props){
     );
 }
 
-function OldCard (){
-    return(
-        <CardContainer>
-            <CardImage src = {godfather_3_pic} alt="Godfather 3"/>
-            <h1>{props.title}</h1>
-            <p>{props.description}</p>
-        </CardContainer>
-    );
-}
-
 export default Card;
