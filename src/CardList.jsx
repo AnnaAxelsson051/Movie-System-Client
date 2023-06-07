@@ -1,4 +1,5 @@
 import * as React from 'react'
+import styled from 'styled-components';
 import axios from 'axios';
 
 import Card from './Card';
@@ -8,42 +9,44 @@ const POSTER_PREFIX = "https://image.tmdb.org/t/p/original";
 const TMDB_API_KEY ="5f783946ae2e4bcb75092962e6100018";
 const TMDB_GET_MOVIES = `https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&with_watch_monetization_types=flatrate&with_genres=80,18,53`;
 
-//Looping the cards and renders them 
+
+const CardListContainer = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+`;
+
+//Looping the cards and renders them from TMDB:
+//Skickar med en array med variabler som om de ändras kör vi use effect igen
+//så fort page ändras
 
 function CardList(props){
 
   const [data, setData] = React.useState({results:[]});
-    
+    const [page, setPage] = React.useState(1);   //så att sidräkning börjar på s 1
   React.useEffect (()=> {
     const fetchData = async () => {
-      const result = await axios(TMDB_GET_MOVIES);
+      const result = await axios(TMDB_GET_MOVIES + "&page=" + page);
 
       setData(result.data);
     };
       fetchData();
-  }, []);
+  }, [page]);
 
-const myMovies =[
-    {
-      "poster": godfather_3_pic,
-      "title": "Godfather III 1",
-      "description": "The story is the last sequel of The Godfather series and it describes Michel Corleones struggles to win back his family, to become a better man and a better father by atoning for his sins and by returning to legal business."
-    },
-    {
-      "poster": godfather_3_pic,
-      "title": "Godfather III 2",
-      "description": "The story is the last sequel of The Godfather series and it describes Michel Corleones struggles to win back his family, to become a better man and a better father by atoning for his sins and by returning to legal business."
-    },
-    {
-      "poster": godfather_3_pic,
-      "title": "Godfather III 3",
-      "description": "The story is the last sequel of The Godfather series and it describes Michel Corleones struggles to win back his family, to become a better man and a better father by atoning for his sins and by returning to legal business."
-    }
-    ];
+  //Pagination functionality:
+
+  const nextPage = () => {
+    setPage((prevState) => prevState +1);
+  }
+
 
     return (
-        <>
-        {data.results.map(movie => <Card title={movie.title} description={movie.overview} poster={POSTER_PREFIX + movie.poster_path}/>)}
+      <>
+      Page {data.page} of {data.total_pages}
+      <button onClick={nextPage}>NEXT PAGE</button>
+        <CardListContainer>
+        {data.results.map(movie => <Card title={movie.title} overview={movie.overview} poster={POSTER_PREFIX + movie.poster_path}/>)}
+        </CardListContainer>
         </>
     );
 }
