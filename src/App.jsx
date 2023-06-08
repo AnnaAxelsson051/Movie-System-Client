@@ -2,6 +2,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import{
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom"
+
 import Hero from './Hero';
 import CardList from './CardList';
 
@@ -24,14 +33,23 @@ max-width: 20em;
 function App() {
 
   return (
+    <Router>
     <MainContainer>
  <h1>Test</h1>
- <StyledPara>Test Text Lorem ipsum dolor sit amet consectetur, 
+ {/*<StyledPara>Test Text Lorem ipsum dolor sit amet consectetur, 
   adipisicing elit. Eos cumque quam facilis suscipit quaerat 
   numquam facere iste recusandae error doloremque? Earum 
   error quibusdam mollitia adipisci aut optio esse cumque 
   odio!</StyledPara>
-  <Hero/>
+  <Hero/>*/}
+  <ul>
+    <li>
+<Link to="/">Home</Link>
+    </li>
+    <li>
+    <Link to="/movie">Movie</Link>
+    </li>
+  </ul>
   <CardList/>
 
   
@@ -43,6 +61,7 @@ function App() {
                 sins and by returning to legal business."/>
   */}
  </MainContainer>
+ </Router>
   )
 }
 
