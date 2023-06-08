@@ -28,7 +28,28 @@ const StyledPara = styled.p`
 max-width: 20em;
 `;
 
+function Movie () {
+  let {movieId} = useParams();
+  return <h3> Requested movie ID: {movieId}</h3>;
+}
 
+function Movies () {
+  let match = useRouteMatch();
+
+ return (
+  <>
+ <h1>Movie</h1>
+ <Switch>
+  <Route path={`${match.path}/:movieId`}>
+  <Movie/>
+  </Route>
+  <Route path={match.path}>
+<h3>Go back and click a movie please</h3>
+  </Route>
+ </Switch>
+ </>
+ );
+};
 
 function App() {
 
@@ -50,7 +71,16 @@ function App() {
     <Link to="/movie">Movie</Link>
     </li>
   </ul>
-  <CardList/>
+
+  <Switch>
+    <Route path="/movie">
+      <Movies/>
+    </Route>
+    <Route path="/">
+    <CardList/>
+    </Route>
+  </Switch>
+ 
 
   
   {/*<Card poster={godfather_3_pic} title="Godfather III" 
