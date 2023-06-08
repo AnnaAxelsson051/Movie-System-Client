@@ -12,7 +12,7 @@ import{
   useParams
 } from "react-router-dom"
 
-import Hero from './Hero';
+import Form from './Form';
 import CardList, { POSTER_PREFIX } from './CardList';
 
 const MainContainer = styled.main`
@@ -91,6 +91,7 @@ function App() {
       <Movies/>
     </Route>
     <Route path="/">
+  <Form/>
     <CardList/>
     </Route>
   </Switch>
