@@ -10,7 +10,8 @@ import{
   Link,
   useRouteMatch,
   useParams
-} from "react-router-dom"
+} from "react-router-dom";
+import { Rating } from 'react-simple-star-rating';
 
 import Form from './Form';
 import CardList, { POSTER_PREFIX } from './CardList';
@@ -44,7 +45,10 @@ React.useEffect (()=> {
 }, []);
 
 
-  return data ? <h1>{data.title}</h1> : <h3> Loading </h3>;
+  return data ? <>
+  <h1>{data.title}</h1> 
+  <Rating initialValue = {data.vote_average / 2} allowFraction/>
+  </>: <h3> Loading </h3>;
 }
 
 function Movies () {

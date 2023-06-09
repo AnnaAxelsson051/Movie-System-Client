@@ -1,8 +1,10 @@
 import React, {useState} from "react";
+import { Rating } from 'react-simple-star-rating';
 
 function Form(){
 const [movie,setMovie] = useState('');
 const [genre,setGenre] = useState('');
+const [ratingValue, setRatingValue] = useState(0);
 
 const genres = [
     {
@@ -29,6 +31,11 @@ function handleGenreChange (evt){
     setGenre(evt.target.value);
     }
 
+    //Loggs rating user selcts
+    const handleRatingChange = (rate) => {
+        setRatingValue(rate)
+        }
+
 function handleSubmit (evt){
 console.log(evt)
 console.log("You entered " + movie + "as movie");
@@ -53,6 +60,7 @@ evt.preventDefault()
    
     </select>
     </label>
+    <Rating initialValue = {2.50} onClick= {handleRatingChange} allowFraction/>
     <button type = "submit">SEND</button>
     </form>
     </>
