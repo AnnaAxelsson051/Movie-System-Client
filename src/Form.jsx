@@ -45,12 +45,15 @@ evt.preventDefault()
     value={movie}
     onChange={handleMovieChange}
     />
-   <label>Genre
-    <button type = "submit">SEND</button>
+   <label>
+    Genre
     <select value={genre} onChange={handleGenreChange}> 
-    <option value={80}>Crime</option>
+    <option value="">- Select Genre -</option>
+    {genres.map(genre => (<option value={genre.id}>{genre.name}</option>))}
+   
     </select>
     </label>
+    <button type = "submit">SEND</button>
     </form>
     </>
     )
