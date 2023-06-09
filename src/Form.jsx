@@ -4,6 +4,21 @@ function Form(){
 const [movie,setMovie] = useState('');
 const [genre,setGenre] = useState('');
 
+const genres = [
+    {
+        id: 80,
+        name: "Crime"
+    },
+    {
+        id: 53,
+        name: "Thriller"
+    },
+    {
+        id: 18,
+        name: "Drama"
+    }
+];
+
 function handleMovieChange (evt){
 //console.log(movieName.target.value);
 setMovie(evt.target.value);
@@ -16,6 +31,8 @@ function handleGenreChange (evt){
 
 function handleSubmit (evt){
 console.log(evt)
+console.log("You entered " + movie + "as movie");
+console.log("You entered " + genre + "as genre");
 evt.preventDefault()
 }
     return (
@@ -28,12 +45,12 @@ evt.preventDefault()
     value={movie}
     onChange={handleMovieChange}
     />
-       <input 
-    type="text" 
-    value={genre}
-    onChange={handleGenreChange}
-    />
+   <label>Genre
     <button type = "submit">SEND</button>
+    <select value={genre} onChange={handleGenreChange}> 
+    <option value={80}>Crime</option>
+    </select>
+    </label>
     </form>
     </>
     )
