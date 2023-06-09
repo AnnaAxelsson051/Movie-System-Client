@@ -13,8 +13,10 @@ import{
 } from "react-router-dom";
 import { Rating } from 'react-simple-star-rating';
 
+import Hero from './Hero';
 import Form from './Form';
 import CardList, { POSTER_PREFIX } from './CardList';
+
 
 const MainContainer = styled.main`
 display: flex;
@@ -74,6 +76,7 @@ function App() {
   return (
     <Router>
     <MainContainer>
+      <Hero/>
  <h1>Test</h1>
  {/*<StyledPara>Test Text Lorem ipsum dolor sit amet consectetur, 
   adipisicing elit. Eos cumque quam facilis suscipit quaerat 
@@ -99,7 +102,8 @@ function App() {
     <CardList/>
     </Route>
   </Switch>
- 
+
+ {/*<PersonList/>*/}
 
   
   {/*<Card poster={godfather_3_pic} title="Godfather III" 
