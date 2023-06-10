@@ -1,9 +1,15 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import User from './User';
+
+const GET_USERS = "";
 
 const UserListBox = styled.div`
-
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
 `;
 
 function UserList(props) {
@@ -19,6 +25,7 @@ function UserList(props) {
   return (
     <>
       <UserListBox>
+            <User name={user.name} email={user.email} />
       </UserListBox>
     </>
   );
