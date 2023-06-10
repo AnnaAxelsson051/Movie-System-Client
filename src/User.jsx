@@ -1,9 +1,21 @@
 import React from 'react';
 
+const UserBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+  border: 1px solid #a69064;
+  width: 27em;
+  margin-bottom: 1.5em;
+`;
 
-function User() {
+function User(props) {
   return (
-      <h1>User</h1>
+    <UserBox>
+    <h1>{props.name}</h1>
+  </UserBox>
     
   );
 }
