@@ -15,7 +15,7 @@ function UserPage() {
           <h1>All Movies</h1>
         </Route>
         <Route path={match.path}>
-          <h3>No user currently selected</h3>
+          <h3>No user is currently selected</h3>
         </Route>
       </Switch>
     </>
