@@ -1,0 +1,27 @@
+import * as React from 'react';
+import { BrowserRouter as Router, useParams } from 'react-router-dom';
+import axios from 'axios';
+
+import UserGenre from './UserGenre';
+const GET_GENRES = "";
+
+function UserGenreDetail() {
+  const [data, setData] = React.useState({ data: [] });
+
+  let { userId } = useParams();
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(GET_GENRES);
+      setData(result);
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+        <UserGenre />
+  );
+}
+
+export default UserGenreDetail;
