@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const ADD_MOVIE ="";
+
+function AddMovie() {
+  const [movie, setMovie] = useState('');
+  const [user, setUser] = useState('');
+  const [genre, setGenre] = useState('');
 
 const genres = [
   {
@@ -61,22 +67,32 @@ const genres = [
   },
 ];
 
-function AddMovie() {
  
 
   
-    function handleSubmit() {
-    }
   
-   function handleUserChange() {
+    function handleUserChange(evt) {
+      console.log(evt.target.value);
+      setUser(evt.target.value);
+    }
 
+  function handleMovieChange(evt) {
+    console.log(evt.target.value);
+    setMovie(evt.target.value);
   }
 
-   function handleMovieChange() {
+  function handleGenreChange(evt) {
+    console.log(evt.target.value);
+    setGenre(evt.target.value);
   }
 
-  function handleGenreChange() {
+  function handleSubmit() {
+  
   }
+
+    async function addMovie(user, genre, movie) {
+     
+    }
 
 
   return (
