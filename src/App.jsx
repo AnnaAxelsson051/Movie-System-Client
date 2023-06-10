@@ -13,6 +13,7 @@ import{
 } from "react-router-dom";
 import { Rating } from 'react-simple-star-rating';
 
+import UserPage from './UserPage';
 import Hero from './Hero';
 import Form from './Form';
 import CardList, { POSTER_PREFIX } from './CardList';
@@ -61,6 +62,7 @@ function Movies () {
  <h1>Movie</h1>
  <Switch>
   <Route path={`${match.path}/:movieId`}>
+    <UserPage/>
   <Movie/>
   </Route>
   <Route path={match.path}>
