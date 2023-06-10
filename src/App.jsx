@@ -76,16 +76,28 @@ function Movies () {
 function App() {
 
   return (
-    <Router>
-    <MainContainer>
-      <Hero/>
- <h1>Test</h1>
- {/*<StyledPara>Test Text Lorem ipsum dolor sit amet consectetur, 
+<Router>
+  <MainContainer>
+    <Hero/>
+    <Switch>
+     <Route path="/user">
+      <UserPage />
+    </Route>
+    <Route path="/">
+    <CardList/>
+    {/*<UserList />*/}
+    </Route>
+  </Switch>
+ </MainContainer>
+  
+    {/*<Movies/>*/}
+  {/*<Form/>*/}
+  {/*<h1>Test</h1>
+ <StyledPara>Test Text Lorem ipsum dolor sit amet consectetur, 
   adipisicing elit. Eos cumque quam facilis suscipit quaerat 
   numquam facere iste recusandae error doloremque? Earum 
   error quibusdam mollitia adipisci aut optio esse cumque 
   odio!</StyledPara>
-  <Hero/>*/}
   <ul>
     <li>
 <Link to="/">Home</Link>
@@ -93,29 +105,7 @@ function App() {
     <li>
     <Link to="/movie">Movie</Link>
     </li>
-  </ul>
-
-  <Switch>
-    <Route path="/movie">
-      <Movies/>
-    </Route>
-    <Route path="/">
-  <Form/>
-    <CardList/>
-    </Route>
-  </Switch>
-
- {/*<PersonList/>*/}
-
-  
-  {/*<Card poster={godfather_3_pic} title="Godfather III" 
-  description="The story is the last sequel of The Godfather series 
-                and it describes Michel Corleone's struggles 
-                to win back his family, to become a better 
-                man and a better father by atoning for his 
-                sins and by returning to legal business."/>
-  */}
- </MainContainer>
+  </ul>*/}
  </Router>
   )
 }

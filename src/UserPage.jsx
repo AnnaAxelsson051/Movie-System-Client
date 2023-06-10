@@ -11,11 +11,11 @@ function UserPage() {
     <>
       <Switch>
         <Route path={`${match.path}/:userId`}>
-          <h1>Genres</h1>
-          <h1>Movies</h1>
+          <h1>All Genres</h1>
+          <h1>All Movies</h1>
         </Route>
         <Route path={match.path}>
-          <h3>No user selected</h3>
+          <h3>No user currently selected</h3>
         </Route>
       </Switch>
     </>
