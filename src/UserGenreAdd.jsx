@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 
 function AddGenre() {
- 
+  const [genre, setGenre] = useState('');
+  const [user, setUser] = useState('');
 
   const genres = [
     {
@@ -62,11 +63,50 @@ function AddGenre() {
       name: 'Western',
     },
   ];
+
+  
+    function handleGenreChange() {
+  
+    }
+  
+   
+    function handleUserChange() {
+
+    }
+  
+
+    function handleSubmit() {
+ 
+    }
+  
+
+    async function addGenre() {
+  
+    }
   
 
   return (
-  
-   <h1>Add Genre</h1>
+    <>
+    <form onSubmit={handleSubmit}>
+      <h1>Add Genre</h1>
+      <label>
+        <input
+          type="text"
+          placeholder="userId"
+          onChange={handleUserChange}
+        />
+      </label>
+      <label>
+        <select value={genre} onChange={handleGenreChange}>
+          <option value="">Select genre</option>
+          {genres.map((genre) => (
+            <option value={genre.id}>{genre.name}</option>
+          ))}
+        </select>
+      </label>
+      <button type="submit">Add Genre</button>
+    </form>
+  </>
   );
 }
 
