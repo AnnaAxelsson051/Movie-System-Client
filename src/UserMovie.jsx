@@ -14,11 +14,12 @@ const UserMovieBox = styled.div`
 
 `;
 
+//Returning movie title with rating
 function UserMovie(props) {
   return (
     <UserMovieBox>
-      <h1>Movie Title</h1>
-      <h1>Movie Rating</h1>
+      <h1>Movie Title: {props.movie}</h1>
+      <h1>Movie Rating: {props.rating}</h1>
     </UserMovieBox>
   );
 }
