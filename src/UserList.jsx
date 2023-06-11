@@ -1,9 +1,11 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 import User from './User';
 
-const GET_USERS = "";
+import * as URLS from './Constants';
 
 const UserListBox = styled.div`
   display: flex;
@@ -16,7 +18,7 @@ function UserList(props) {
   const [user, setUser] = React.useState({ data: [] });
   React.useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(GET_USERS);
+      const result = await axios(URLS.GET_USERS);
       setUser(result);
     };
     fetchData();

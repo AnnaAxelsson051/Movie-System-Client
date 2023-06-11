@@ -66,12 +66,13 @@ function AddGenre() {
     },
   ];
 
+
+  //Adding genre as user clicks submit
 function handleSubmit(evt) {
   console.log(evt);
   addGenre(user, genre);
   evt.preventDefault();
 }
-
 async function addGenre(user, genre) {
   await axios
     .post(URLS.ADD_GENRE_BY_USERID_AND_GENREID(user, genre))

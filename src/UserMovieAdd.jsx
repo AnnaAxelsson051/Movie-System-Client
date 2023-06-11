@@ -68,7 +68,7 @@ const genres = [
 ];
 
  
-
+//Adding movie as user clicks submit
 function handleSubmit(evt) {
   console.log(evt);
   addMovie(user, genre, movie);
@@ -86,6 +86,7 @@ function handleSubmit(evt) {
     });
   }
   
+  //Handeling user input in form
     function handleUserChange(evt) {
       console.log(evt.target.value);
       setUser(evt.target.value);
@@ -102,7 +103,7 @@ function handleSubmit(evt) {
   }
 
 
-
+//Form for adding movie with genre to a user
   return (
     <>
     <h1>Add Movie</h1>

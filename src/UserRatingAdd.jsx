@@ -4,6 +4,8 @@ import axios from 'axios';
 import * as URLS from './Constants';
 
 function AddRating() {
+  const [movie, setMovie] = useState('');
+  const [user, setUser] = useState('');
   const [rating, setRating] = useState('');
 
   const ratings = [1, 2, 3, 4, 5];
