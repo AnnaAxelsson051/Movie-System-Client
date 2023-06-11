@@ -69,7 +69,22 @@ const genres = [
 
  
 
-  
+function handleSubmit(evt) {
+  console.log(evt);
+  addMovie(user, genre, movie);
+  evt.preventDefault();
+}
+
+  async function addMovie(user, genre, movie) {
+    await axios
+    .post(ADD_MOVIE)
+    .then(() => {
+      console.log('Movie successfully added');
+    })
+    .catch(() => {
+      console.log('An error occured when attempting to add the movie');
+    });
+  }
   
     function handleUserChange(evt) {
       console.log(evt.target.value);
@@ -86,22 +101,6 @@ const genres = [
     setGenre(evt.target.value);
   }
 
-  function handleSubmit(evt) {
-    console.log(evt);
-    addMovie(user, genre, movie);
-    evt.preventDefault();
-  }
-
-    async function addMovie(user, genre, movie) {
-      await axios
-      .post(ADD_MOVIE)
-      .then(() => {
-        console.log('Movie successfully added');
-      })
-      .catch(() => {
-        console.log('An error occured when attempting to add the movie');
-      });
-    }
 
 
   return (

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
+import * as URLS from './Constants';
 
 function AddGenre() {
   const [genre, setGenre] = useState('');
@@ -64,26 +66,34 @@ function AddGenre() {
     },
   ];
 
-  
-    function handleGenreChange() {
-  
-    }
-  
-   
-    function handleUserChange() {
+function handleSubmit(evt) {
+  console.log(evt);
+  addGenre(user, genre);
+  evt.preventDefault();
+}
 
-    }
-  
+async function addGenre(user, genre) {
+  await axios
+    .post(URLS.ADD_GENRE_BY_USERID_AND_GENREID(user, genre))
+    .then(() => {
+      console.log('Added');
+    })
+    .catch(() => {
+      console.log('An error occured when attempting to add the movie');
+    });
+}
 
-    function handleSubmit() {
- 
-    }
-  
+function handleGenreChange(evt) {
+  console.log(evt.target.value);
+  setGenre(evt.target.value);
+}
 
-    async function addGenre() {
-  
-    }
-  
+function handleUserChange(evt) {
+  console.log(evt.target.value);
+  setUser(evt.target.value);
+}
+
+
 
   return (
     <>
