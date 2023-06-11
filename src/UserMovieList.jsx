@@ -3,8 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import UserMovie from './UserMovie';
-
-const GET_RATING = "";
+import * as URLS from './Constants';
 
 function UserMovieRating() {
   const [data, setData] = React.useState({ data: [] });
@@ -13,7 +12,7 @@ function UserMovieRating() {
 
   React.useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(GET_RATING);
+      const result = await axios(URLS.GET_MOVIES_AND_RATING_BY_USERID(userId));
 
       setData(result);
     };
