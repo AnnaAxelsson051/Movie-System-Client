@@ -8,6 +8,39 @@ function AddRating() {
 
   const ratings = [1, 2, 3, 4, 5];
 
+   //Updating rating, movie and user that user 
+   //selects//enters the form
+    function handleRatingChange(evt) {
+      console.log(evt.target.value);
+      setRating(evt.target.value);
+    }
+    function handleMovieChange(evt) {
+      console.log(evt.target.value);
+      setMovie(evt.target.value);
+    }
+    function handleUserChange(evt) {
+      console.log(evt.target.value);
+      setUser(evt.target.value);
+    }
+
+    //Adding rating as user clicks submit
+    function handleSubmit(evt) {
+      console.log(evt);
+      addRating(user, rating, movie);
+      evt.preventDefault();
+    }
+    async function addRating(user, rating, movie) {
+      await axios
+        .post(URLS.ADD_RATING_BY_USERID_RATING_AND_MOVIENAME(user, rating, movie))
+        .then(() => {
+          console.log('Added');
+        })
+        .catch(() => {
+          console.log('Something went wrong');
+        });
+    }
+
+    //Form for adding user rating on a movie
   return (
   
     <>
