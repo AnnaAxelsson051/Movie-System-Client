@@ -12,7 +12,7 @@ function UserGenreDetail() {
 
   React.useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(GET_GENRES);
+      const result = await axios(URLS.GET_GENRES_BY_USERID(userId));
       setData(result);
     };
 

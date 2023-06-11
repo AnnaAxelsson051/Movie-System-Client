@@ -14,6 +14,7 @@ const UserListBox = styled.div`
   justify-content: space-evenly;
 `;
 
+//Listing all users
 function UserList(props) {
   const [user, setUser] = React.useState({ data: [] });
   React.useEffect(() => {
@@ -24,10 +25,15 @@ function UserList(props) {
     fetchData();
   }, []);
 
+  //Returning user names and emails
   return (
     <>
       <UserListBox>
+      {user.data.map((user) => (
+          <Link to={`/user/${user.id}`} key={user.id}>
             <User name={user.name} email={user.email} />
+          </Link>
+        ))}
       </UserListBox>
     </>
   );
