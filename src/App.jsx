@@ -1,5 +1,5 @@
 
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
@@ -11,7 +11,7 @@ import{
   useRouteMatch,
   useParams
 } from "react-router-dom";
-import { Rating } from 'react-simple-star-rating';
+{/*import { Rating } from 'react-simple-star-rating';*/}
 
 import UserPage from './UserPage';
 import Hero from './Hero';
@@ -81,7 +81,7 @@ function App() {
     <Hero/>
     <Switch>
      <Route path="/user">
-      <UserPage />
+      {/*<UserPage />*/}
     </Route>
     <Route path="/">
     <CardList/>
@@ -90,7 +90,6 @@ function App() {
   </Switch>
  </MainContainer>
   
-    {/*<Movies/>*/}
   {/*<Form/>*/}
   {/*<h1>Test</h1>
  <StyledPara>Test Text Lorem ipsum dolor sit amet consectetur, 
