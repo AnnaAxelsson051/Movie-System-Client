@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const ADD_MOVIE ="";
+import * as URLS from './Constants';
 
 function AddMovie() {
   const [movie, setMovie] = useState('');
@@ -77,7 +77,7 @@ function handleSubmit(evt) {
 
   async function addMovie(user, genre, movie) {
     await axios
-    .post(ADD_MOVIE)
+    .post(URLS.ADD_MOVIE_BY_USERID_GENREID_AND_MOVIENAME(user, genre, movie))
     .then(() => {
       console.log('Movie successfully added');
     })
