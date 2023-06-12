@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import * as URLS from './Constants';
 
-function AddRating() {
+function UserRatingAdd() {
   const [movie, setMovie] = useState('');
   const [user, setUser] = useState('');
   const [rating, setRating] = useState('');
@@ -51,7 +51,7 @@ function AddRating() {
         <label>
           <input
             type="text"
-            placeholder="UserId"
+            placeholder="User Id"
             onChange={handleUserChange}
           />
         </label>
@@ -76,4 +76,4 @@ function AddRating() {
   );
 }
 
-export default AddRating;
+export default UserRatingAdd;

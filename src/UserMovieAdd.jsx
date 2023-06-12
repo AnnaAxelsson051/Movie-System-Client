@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import * as URLS from './Constants';
 
-function AddMovie() {
+function UserMovieAdd() {
   const [movie, setMovie] = useState('');
   const [user, setUser] = useState('');
   const [genre, setGenre] = useState('');
@@ -136,4 +136,4 @@ function handleSubmit(evt) {
   );
 }
 
-export default AddMovie;
+export default UserMovieAdd;
