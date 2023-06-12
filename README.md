@@ -18,5 +18,6 @@ This is an application where users can collect their favourite genres and movies
 - CSS
 
 ---
+## Images of the application
 
 ![Screenshot 2023-06-12 at 18 44 31](https://github.com/AnnaAxelsson051/Open_AI_Codex/assets/103879144/974b6c2e-a911-4696-990f-def00cf3d3b5)
