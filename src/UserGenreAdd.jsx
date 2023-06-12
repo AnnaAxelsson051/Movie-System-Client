@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import * as URLS from './Constants';
 
-function AddGenre() {
+function UserGenreAdd() {
   const [genre, setGenre] = useState('');
   const [user, setUser] = useState('');
 
@@ -121,4 +121,4 @@ function handleUserChange(evt) {
   );
 }
 
-export default AddGenre;
+export default UserGenreAdd;
