@@ -5,22 +5,24 @@ import axios from 'axios';
 import * as URLS from './Constants';
 import UserGenre from './UserGenre';
 
+//Getting all user genres, returning them as a list
 function UserGenreDetail() {
   const [data, setData] = React.useState({ data: [] });
-
   let { userId } = useParams();
-
   React.useEffect(() => {
     const fetchData = async () => {
       const result = await axios(URLS.GET_GENRES_BY_USERID(userId));
       setData(result);
     };
-
     fetchData();
   }, []);
 
   return (
-        <UserGenre />
+    <>
+      {data.data.map((genre) => (
+        <UserGenre title={genre.title} />
+      ))}
+    </>
   );
 }
 

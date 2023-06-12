@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const UserBox = styled.div`
   display: flex;
@@ -16,6 +17,7 @@ const UserContact = styled.p`
   padding: 1.2em;
 `;
 
+//Displaying the individual user page
 function User(props) {
   return (
     <UserBox>
