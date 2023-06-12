@@ -6,7 +6,7 @@ This is an application where users can collect their favourite genres and movies
 
 ---
 
-## Technologies used
+## Technologies used:
 
 - Vite / React
 - Azure Datastudio
