@@ -2,12 +2,12 @@ import * as React from 'react';
 import { useRouteMatch, Switch, Route } from 'react-router-dom';
 
 
-{/*
-import UserMovieList from './UserMovieList';
+
+import UserMovieRating from './UserMovieRating';
 import UserGenreList from './UserGenreList';
 import UserGenreAdd from './UserGenreAdd';
 import UserMovieAdd from './UserMovieAdd';
-import UserRatingAdd from './UserRatingAdd';*/}
+import UserRatingAdd from './UserRatingAdd';
 
 function UserPage() {
   let match = useRouteMatch();
@@ -24,7 +24,7 @@ function UserPage() {
           <h1>All Movies</h1>
           <UserMovieAdd/>
           <UserRatingAdd/>
-  <UserMovieList/>
+          <UserMovieRating/>
         </Route>
         <Route path={match.path}>
           <h3>No user is currently selected</h3>

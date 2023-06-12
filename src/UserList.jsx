@@ -4,7 +4,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 import User from './User';
-
 import * as URLS from './Constants';
 
 const UserListBox = styled.div`

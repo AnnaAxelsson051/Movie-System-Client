@@ -6,7 +6,7 @@ import * as URLS from './Constants';
 import UserGenre from './UserGenre';
 
 //Getting all user genres, returning them as a list
-function UserGenreDetail() {
+function UserGenreList() {
   const [data, setData] = React.useState({ data: [] });
   let { userId } = useParams();
   React.useEffect(() => {
@@ -26,4 +26,4 @@ function UserGenreDetail() {
   );
 }
 
-export default UserGenreDetail;
+export default UserGenreList;

@@ -1,15 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import godfather_3_pic from './assets/godfather_3.jpeg';
 import mob_films from './assets/mob_films.jpeg';
 
 const Header = styled.h1`
 font-size: 55px;
 letter-spacing: 1.1rem;
 padding:0.5rem;
-`;
-const Nav = styled.h3`
-
 `;
 
 const IntroBox = styled.p`

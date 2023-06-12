@@ -5,6 +5,7 @@ import axios from 'axios';
 import UserMovie from './UserMovie';
 import * as URLS from './Constants';
 
+//Getting user movie and rating
 function UserMovieRating() {
   const [data, setData] = React.useState({ data: [] });
 
@@ -22,7 +23,11 @@ function UserMovieRating() {
 
 
   return (
-        <UserMovie/>
+    <>
+      {data.data.map((movie) => (
+        <UserMovie movie={movie.movie} rating={movie.rating} />
+      ))}
+    </>
   );
 }
 
