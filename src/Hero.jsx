@@ -11,7 +11,6 @@ padding:0.5rem;
 const IntroBox = styled.p`
 margin:0.5rem;
 width:36rem;
-width:38rem;
 font-size: 20px;
 padding-left:0.6rem;
 padding-top:0.5rem;
@@ -92,13 +91,13 @@ function Hero () {
         </TitleBox>
     <NavBox>
         <h3>📽️</h3>
-        <h3>Home</h3>
-        <h3>About </h3>
-        <h3>Contact</h3>
+        <h3>HOME</h3>
+        <h3>ABOUT </h3>
+        <h3>CONTACT</h3>
         <h3>📽️</h3>
     </NavBox>
     <IntroBox>
-    <p>Collect your favourite genres and movies - and add ratings &nbsp;📣</p>
+    <p>Collect your favourite genres and movies - and add ratings</p>
     </IntroBox>
     <img src={mob_films} alt="Logo" height="650px"/>
     </HeaderBox> 
