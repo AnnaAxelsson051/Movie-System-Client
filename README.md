@@ -25,7 +25,7 @@ This is an application where users can add their favourite genres and movies on 
 
 ## Setup
 
-Clone the project and open the project folder in VS Code. Modify the baseURL for the api and add your personal TMDB API-key. Open the terminal and navigate in to the project folder.
+Clone the project and open the project folder in VS Code. Modify the base URL for the API and add your personal TMDB API-key. Open the terminal and navigate in to the project folder.
 
 Install all the required packages:
 
