@@ -1,4 +1,4 @@
-const API_PREFIX = 'https://localhost:7131';
+const API_PREFIX = 'https://localhost:7048';
 
 export const GET_USERS = "";
 
