@@ -1,6 +1,6 @@
 # MOVIE SYSTEM
 
-## ⇨ ⇾ 💻 User Interface
+## 💻 User Interface
 
 
 ![Screenshot 2023-06-13 at 13 12 55](https://github.com/AnnaAxelsson051/Open_AI_Codex/assets/103879144/fe9b0038-ef85-46c5-9939-c681d3a9b09b)
