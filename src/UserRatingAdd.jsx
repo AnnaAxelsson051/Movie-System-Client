@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import * as URLS from './Constants';
 
+//rendering a form for adding a rating to a movie by a user
+
 function UserRatingAdd() {
   const [movie, setMovie] = useState('');
   const [user, setUser] = useState('');
@@ -10,8 +12,7 @@ function UserRatingAdd() {
 
   const ratings = [1, 2, 3, 4, 5];
 
-   //Updating rating, movie and user that user 
-   //selects//enters the form
+   //Handeling user input in form
     function handleRatingChange(evt) {
       console.log(evt.target.value);
       setRating(evt.target.value);
@@ -42,7 +43,7 @@ function UserRatingAdd() {
         });
     }
 
-    //Form for adding user rating on a movie
+   
   return (
   
     <>

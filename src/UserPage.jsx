@@ -19,12 +19,12 @@ function UserPage() {
       <Switch>
         <Route path={`${match.path}/:userId`}>
           <h1>All Genres</h1>
-          <UserGenreAdd/>
-          <UserGenreList/>
+          <UserGenreAdd/> {/*Adding genre */}
+          <UserGenreList/> {/*Listing genre */}
           <h1>All Movies</h1>
-          <UserMovieAdd/>
-          <UserRatingAdd/>
-          <UserMovieRating/>
+          <UserMovieAdd/> {/*Adding movie */}
+          <UserRatingAdd/> {/*Adding rating */}
+          <UserMovieRating/> {/*Getting user movie and rating */}
         </Route>
         <Route path={match.path}>
           <h3>No user is currently selected</h3>

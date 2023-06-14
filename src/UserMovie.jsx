@@ -13,7 +13,7 @@ const UserMovieBox = styled.div`
 
 `;
 
-//Returning movie title with rating
+//Returning a box displaying the title and rating of a movie.
 function UserMovie(props) {
   return (
     <UserMovieBox>

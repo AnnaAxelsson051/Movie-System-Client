@@ -25,16 +25,13 @@ function App() {
   return (
 <Router>
   <MainContainer>
-    <Hero/> 
-    {/*Header with app title, nav and image*/}
+    <Hero/> {/*Header with app title, nav and image*/}
     <Switch>
      <Route path="/user">
-      <UserPage />
-      {/*Displaying individual user page */}
+      <UserPage /> {/*Displaying individual user page */}
     </Route>
     <Route path="/">
-    <UserList /> 
-    {/*Displaying all users */}
+    <UserList /> {/*Displaying all users */}
     </Route>
   </Switch>
  </MainContainer>

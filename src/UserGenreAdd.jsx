@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import * as URLS from './Constants';
 
+//rendering a form for adding a genre to a user
+
 function UserGenreAdd() {
   const [genre, setGenre] = useState('');
   const [user, setUser] = useState('');
@@ -84,6 +86,7 @@ async function addGenre(user, genre) {
     });
 }
 
+  //Handeling user input in form
 function handleGenreChange(evt) {
   console.log(evt.target.value);
   setGenre(evt.target.value);

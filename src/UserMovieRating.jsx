@@ -5,7 +5,10 @@ import axios from 'axios';
 import UserMovie from './UserMovie';
 import * as URLS from './Constants';
 
-//Getting user movie and rating
+// This component fetches data related to movies and their ratings 
+//based on a specific user ID and renders a list of UserMovie 
+//components displaying movies and their corresponding rating
+
 function UserMovieRating() {
   const [data, setData] = React.useState({ data: [] });
 

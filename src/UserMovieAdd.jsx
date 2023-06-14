@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import * as URLS from './Constants';
 
+//rendering a form for adding a movie with a genre to a user
+
 function UserMovieAdd() {
   const [movie, setMovie] = useState('');
   const [user, setUser] = useState('');
@@ -103,7 +105,7 @@ function handleSubmit(evt) {
   }
 
 
-//Form for adding movie with genre to a user
+
   return (
     <>
     <h1>Add Movie</h1>
