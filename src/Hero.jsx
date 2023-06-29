@@ -34,7 +34,6 @@ const HeaderBox = styled.div`
   justify-content: space-evenly;
   align-items: center;
   height: auto;
-  /*border: 1px solid #a69064;*/
   width: 42em;
   margin-bottom: 1.2rem;
 `;
@@ -69,7 +68,6 @@ const NavBox = styled.div`
   height: auto;
   width: 90vw;
   letter-spacing: 0.2rem;
-  //border: 1.5px solid #5f4d29;;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43);
 padding:1rem;
@@ -83,26 +81,30 @@ const ImgBox = styled.img`
  //🎥📣📽️
 `;
 
-function Hero () {
-    return(
-        <HeaderBox>
-            <TitleBox>
+function Hero() {
+  return (
+    <HeaderBox>
+      <TitleBox>
         <Header>🎞 MOVIE SPOT</Header>
-        </TitleBox>
-    <NavBox>
+      </TitleBox>
+
+      <NavBox>
+        {/*If I had more time I would make clickable nav links and
+        extend the application features further */}
         <h3>📽️</h3>
         <h3>HOME</h3>
         <h3>ABOUT </h3>
         <h3>CONTACT</h3>
         <h3>📽️</h3>
-    </NavBox>
-    <IntroBox>
-    <p>Collect your favourite genres and movies - and add ratings</p>
-    </IntroBox>
-    <img src={mob_films} alt="Logo" height="650px"/>
-    </HeaderBox> 
-    
-    );
+      </NavBox>
+
+      <IntroBox>
+        <p>Collect your favourite genres and movies - and add ratings</p>
+      </IntroBox>
+      <img src={mob_films} alt="Logo" height="650px" />
+    </HeaderBox>
+
+  );
 }
 
 export default Hero;
