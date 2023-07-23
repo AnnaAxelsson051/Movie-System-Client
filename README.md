@@ -6,8 +6,8 @@
 
 ## Description 
 
-This is an application where users can add their favourite genres and movies to a personal users page - as well as add ratings for movies they have watched. Users are rendered on the page from a database set up in Azure Datastudio and information is exchanged with the database via a [Movie System Server](https://github.com/AnnaAxelsson051/Movie-System-Server) I have built. The server is built with C# / .NET and it also fetches data from The Movie Database (TMDB) via an external API.
-
+This is the front end part of a movie system application built in React that communicates with a [Movie System Server](https://github.com/AnnaAxelsson051/Movie-System-Server). 
+Functionalities include a starting page that displays information about all the users in the system. When clicking a user a personal users page appears where all genres and movies that specific user has liked are listed, as well as all the ratings the user has given to various movies. Its possible to connect a new genre to a user and also to add new movie-links and ratings.
 
 ---
 
