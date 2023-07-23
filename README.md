@@ -7,7 +7,7 @@
 ## Description 
 
 This is the front end part of a movie system application built in React that communicates with a [Movie System Server](https://github.com/AnnaAxelsson051/Movie-System-Server). 
-Functionalities include a starting page that displays information about all the users in the system. When clicking a user a personal users page appears where all genres and movies that specific user has liked are listed, as well as all the ratings the user has given to various movies. Its possible to connect a new genre to a user and also to add new movie-links and ratings.
+Functionalities include a starting page that displays information about all the users in the system. When clicking a user a personal users page appears where all genres and movies that specific user has liked are listed, as well as all the ratings the user has given to various movies. Its possible to connect a new genre to a user and add new movie-links and ratings.
 
 ---
 
