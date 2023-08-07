@@ -1,4 +1,4 @@
-# MOVIE SYSTEM CLIENT
+# Movie System Client
 
 ## User Interface
 
