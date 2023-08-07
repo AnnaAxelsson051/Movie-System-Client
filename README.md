@@ -13,8 +13,6 @@ This is the frontend component of a movie system application developed using Rea
 ## Technologies used:
 
 - Vite / React
-- Azure Datastudio
-- SQL
 - React Router 
 - Styled Components
 - Axios
