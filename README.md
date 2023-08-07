@@ -6,8 +6,7 @@
 
 ## Description 
 
-This is the front end part of a movie system application built in React that communicates with a [Movie System Server](https://github.com/AnnaAxelsson051/Movie-System-Server). 
-Functionalities include a starting page that displays information about all the users in the system. When clicking a user a personal users page appears where all genres and movies that specific user has liked are listed, as well as all the ratings the user has given to various movies. Its possible to connect a new genre to a user and add new movie-links and ratings.
+This is the frontend component of a movie system application developed using React, designed to interface with a [Movie System Server](https://github.com/AnnaAxelsson051/Movie-System-Server). Key features encompass an initial landing page showcasing comprehensive user data. Upon selecting a user, a personalized user page showcases the genres and movies the user has liked, alongside the user's movie ratings. Users have the capability to associate new genres, append movie links, and provide ratings.
 
 ---
 
@@ -16,7 +15,7 @@ Functionalities include a starting page that displays information about all the 
 - Vite / React
 - Azure Datastudio
 - SQL
-- React Router
+- React Router 
 - Styled Components
 - Axios
 - HTML
