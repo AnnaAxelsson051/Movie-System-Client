@@ -12,7 +12,7 @@ This is the frontend component of a movie system application developed using Rea
 
 ---
 
-## Technologies used:
+## Technologies used
 
 - Vite / React
 - React Router 
